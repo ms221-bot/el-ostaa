@@ -1,8 +1,8 @@
 
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
+import { getFirestore } from "firebase/firestore";
 
-// إعدادات Firebase المقدمة من العميل
 const firebaseConfig = {
   apiKey: "AIzaSyDlOkEXPcWF3nWjkTJZgMroaepfvyI10LE",
   authDomain: "el-ostaa.firebaseapp.com",
@@ -14,8 +14,8 @@ const firebaseConfig = {
   measurementId: "G-4TP8C29R0X"
 };
 
-// تهيئة تطبيق Firebase
 const app = initializeApp(firebaseConfig);
 
-// تصدير مرجع قاعدة البيانات لاستخدامه في الصفحات
-export const db = getDatabase(app);
+// أسماء واضحة لتجنب الخطأ e._checkNotDeleted
+export const rtdb = getDatabase(app);
+export const firestore = getFirestore(app);
